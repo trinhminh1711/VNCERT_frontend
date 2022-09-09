@@ -6,12 +6,16 @@ export async function login(username , password) {
     password: password,
   });
   const dataRes = await res;
-  if (dataRes.data.login) {
+  if (dataRes.data.login == 1) {
     sessionStorage.clear();
     sessionStorage.setItem("accessToken", dataRes.data.accessToken);
     sessionStorage.setItem("user_id", dataRes.data.user_id);
     sessionStorage.setItem("loginStatus", 1);
-    return true;
+    return 1;
   }
-  return false;
+  else if (dataRes.data.login == 2) 
+  {
+    return 2
+  }
+  return 0;
 }

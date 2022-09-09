@@ -6,7 +6,7 @@
         <form @submit.prevent="submit">
           <v-container>
             <v-row class="flex justify-center">
-              <v-col cols="6" sm="12" md="6">
+              <v-col class="pd-0" cols="6" sm="12" md="6">
                 <v-row>
                   <v-col cols="6" sm="12" md="6">
                     <validation-provider v-slot="{ errors }" name="Name" rules="required|max:10">
@@ -366,5 +366,9 @@ export default {
 .register-main {
   background-color: #f1f5f9;
   min-height: 100vh;
+}
+.pd-0
+{
+  padding: 0 !important;
 }
 </style>

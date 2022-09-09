@@ -1,9 +1,9 @@
 <template>
-  <div class="d-flex">
+  <div>
     <div class="col-18-persent">
       <SideBar />
     </div>
-    <div class="flex-1 px-5 bg-gray">
+    <div class="col-82-persent px-5 bg-gray">
       <ToolBar />
       <Notification />
       <slot></slot>
@@ -25,16 +25,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.col-18-persent
-{
-    width: 18%;
+.col-18-persent {
+  width: 18%;
+  position: fixed;
+  float: left;
 }
-.flex-1
-{
-    flex: 1;
+.col-82-persent {
+  width: 82%;
+  float: right;
 }
-.bg-gray
-{
+.bg-gray {
   background: rgb(245, 240, 240);
 }
 </style>

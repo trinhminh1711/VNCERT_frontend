@@ -2,6 +2,18 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.bg-white
+{
+  background: #fff;
+}
+.btn-dark
+{
+  color: #fff !important;
+  background: #002960 !important;
+  text-transform: capitalize !important;
+  box-shadow: none !important;
+  border-radius: 5px !important;
+}
 .color-dark {
   color: #002960;
 }
@@ -10,6 +22,12 @@
 }
 .cusor-pointer:hover {
   cursor: pointer;
+}
+.text-title
+{
+  font-size: 24px;
+  color: #002960;
+  font-weight: 500;
 }
 .gap-xl {
   gap: 2rem;

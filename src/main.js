@@ -3,8 +3,13 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import vuetify from "./plugins/vuetify";
-
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
 Vue.config.productionTip = false;
+const options = {
+  timeout: 4000
+};
+Vue.use(Toast, options);
 Vue.mixin({
   created() {
     let perfData = window.performance.timing;

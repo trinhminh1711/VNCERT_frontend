@@ -59,11 +59,16 @@ export default {
         return 0;
       } else {
         var checkLogin = await loginApi.login(this.username, this.password);
-        if (!checkLogin) {
+        if (checkLogin == 2) {
+          this.snackbar = true;
+          this.text = "Tài khoản tạm thời bị khóa";
+        } else if(checkLogin == 1) {
+          this.$router.push({ name: "DashBoardPage" });
+        }
+        else
+        {
           this.snackbar = true;
           this.text = "Tên đăng nhập hoặc mật khẩu không đúng";
-        } else {
-          this.$router.push({ path: "/" });
         }
         this.username = "";
         this.password = "";
